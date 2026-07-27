@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/paths";
 
 const navLinks = [
   { href: "#especialidades", label: "Procedimiento" },
@@ -14,12 +15,13 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src={assetPath("/logo.png")}
             alt="Inspira Medical & Estetic Center"
             width={150}
             height={45}
             className="h-9 w-auto object-contain md:h-10"
             priority
+            unoptimized
           />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">

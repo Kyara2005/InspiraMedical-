@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/paths";
 
 const links = [
   {
@@ -52,12 +53,13 @@ export default function TreePage() {
       <div className="relative z-10 flex w-full max-w-md flex-col items-center">
         <Link href="/" className="animate-fade-up mb-2">
           <Image
-            src="/logo.png"
+            src={assetPath("/logo.png")}
             alt="Inspira Medical & Estetic Center"
             width={280}
             height={90}
             className="h-auto w-[220px] object-contain drop-shadow-lg md:w-[260px]"
             priority
+            unoptimized
           />
         </Link>
         <p className="animate-fade-up-delay mt-2 text-center text-sm font-semibold uppercase tracking-[0.18em] text-brand-cyan/90">

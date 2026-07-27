@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 
 export function Gallery() {
   return (
@@ -26,14 +27,14 @@ export function Gallery() {
               preload="auto"
               aria-label="Video de Rinoplastia Ultrasónica Técnica Turca"
             >
-              <source src="/galeria-rinoplastia.mp4" type="video/mp4" />
+              <source src={assetPath("/galeria-rinoplastia.mp4")} type="video/mp4" />
               Tu navegador no soporta la reproducción de video.
             </video>
           </div>
 
           <figure className="w-full max-w-md overflow-hidden rounded-2xl bg-black shadow-2xl shadow-black/40 ring-1 ring-white/10">
             <Image
-              src="/galeria-antes-despues.png"
+              src={assetPath("/galeria-antes-despues.png")}
               alt="Antes y después — Rinoplastia Ultrasónica Terciaria, reconstrucción nasal por Dr. Bernal"
               width={1080}
               height={1920}

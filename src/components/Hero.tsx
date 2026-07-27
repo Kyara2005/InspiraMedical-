@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/paths";
 
 export function Hero() {
   return (
@@ -14,7 +15,7 @@ export function Hero() {
           preload="auto"
           aria-label="Rinoplastia ultrasónica técnica turca"
         >
-          <source src="/hero-rinoplastia.mp4" type="video/mp4" />
+          <source src={assetPath("/hero-rinoplastia.mp4")} type="video/mp4" />
         </video>
       </div>
 
@@ -25,12 +26,13 @@ export function Hero() {
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-6 pb-20 pt-32 md:justify-center md:pb-24">
         <div className="max-w-xl">
           <Image
-            src="/logo.png"
+            src={assetPath("/logo.png")}
             alt="Inspira Medical & Estetic Center"
             width={400}
             height={130}
             className="animate-fade-up mb-8 h-auto w-[min(100%,320px)] object-contain md:w-[380px]"
             priority
+            unoptimized
           />
           <p className="animate-fade-up mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-brand-cyan">
             Técnica Turca
