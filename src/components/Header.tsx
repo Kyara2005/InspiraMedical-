@@ -3,8 +3,9 @@ import Link from "next/link";
 import { assetPath } from "@/lib/paths";
 
 const navLinks = [
-  { href: "#especialidades", label: "Procedimiento" },
+  { href: "#tecnica-turca", label: "Técnica Turca" },
   { href: "#galeria", label: "Galería" },
+  { href: "#certificados", label: "Certificados" },
   { href: "#testimonios", label: "Testimonios" },
   { href: "/tree", label: "Contacto" },
 ];
@@ -37,7 +38,7 @@ export function Header() {
         </nav>
         <Link
           href="/tree"
-          className="rounded-md bg-brand-sky px-4 py-2 text-sm font-semibold text-brand-navy transition hover:bg-brand-cyan"
+          className="rounded-md bg-brand-sky px-4 py-2 text-sm font-semibold text-brand-navy shadow-[0_0_30px_-8px_rgba(78,184,232,0.7)] transition hover:bg-brand-cyan"
         >
           Agendar
         </Link>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -21,8 +22,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${raleway.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+    <html
+      lang="es"
+      className={`${raleway.variable} ${raleway.className} h-full antialiased`}
+    >
+      <body
+        className={`${raleway.className} flex min-h-full flex-col font-sans antialiased`}
+      >
+        {children}
+        <WhatsAppFloat />
+      </body>
     </html>
   );
 }
